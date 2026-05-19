@@ -1,0 +1,39 @@
+:root {
+  --bg: #0f0d15;
+  --bg-card: #1a1723;
+  --bg-elevated: #242030;
+  --text: #c8c3d5;
+  --text-muted: #888299;
+  --text-heading: #f0edf5;
+  --accent: #a78bfa;
+  --accent-dim: #7c6bc4;
+  --border: #2e2840;
+  --danger: #f87171;
+  --danger-bg: rgba(248, 113, 113, 0.1);
+  --shadow: rgba(0, 0, 0, 0.4) 0 8px 24px;
+
+  --sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --serif: 'Playfair Display', Georgia, serif;
+
+  font: 16px/1.6 var(--sans);
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+}
+
+#root {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+}

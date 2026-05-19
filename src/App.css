@@ -1,0 +1,148 @@
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.header {
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+.title {
+  font-family: var(--serif);
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--text-heading);
+  line-height: 1.15;
+  margin: 0 0 8px;
+}
+
+.subtitle {
+  font-size: 17px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 100px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: var(--text);
+  font: 15px/1.6 var(--sans);
+  resize: vertical;
+  outline: none;
+}
+
+.textarea::placeholder {
+  color: var(--text-muted);
+  opacity: 0.6;
+}
+
+.textarea.over-limit {
+  color: var(--danger);
+}
+
+.form-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.char-counter {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.char-counter.over-limit {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.submit-btn {
+  padding: 10px 28px;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  font: 600 15px var(--sans);
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s, transform 0.15s;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background: var(--accent-dim);
+  transform: translateY(-1px);
+}
+
+.submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submit-btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--text-muted);
+  font-style: italic;
+  padding: 48px 0;
+}
+
+.confession-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px 20px;
+  animation: fade-in 0.4s ease-out both;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.confession-text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text);
+  word-wrap: break-word;
+}
+
+.confession-time {
+  font-size: 12px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
