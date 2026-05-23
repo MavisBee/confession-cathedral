@@ -18,7 +18,7 @@ function App() {
   const isEmptyOrWhitespace = text.trim().length === 0
 
   const handleSubmit = () => {
-    if (isEmptyOrWhitespace || isOverLimit) return
+    if (isOverLimit) return
 
     const newConfession: Confession = {
       id: Date.now(),
@@ -74,7 +74,7 @@ function App() {
           <button
             type="submit"
             className="submit-btn"
-            disabled={isEmptyOrWhitespace || isOverLimit}
+            disabled={isOverLimit}
           >
             Confess
           </button>
